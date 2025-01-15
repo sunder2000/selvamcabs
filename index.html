@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selvam Cabs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0e68c, #87ceeb);
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0e68c;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            color: #ff4500;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-content h2 {
+            font-size: 2rem;
+            color: #32cd32;
+            margin-top: 0;
+        }
+
+        .slideshow {
+              position: relative;
+              width: 100%; /* Full width */
+              height: 500px; /* Adjust height as needed */
+              overflow: hidden; /* Prevent any overflow */
+              margin: 0 auto; /* Center the slideshow */
+        }
+
+        .slideshow img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover; /* Ensure the image covers the entire container */
+             display: none;
+        }
+
+        .slideshow img:first-child {
+            display: block;
+        }
+      .container {
+  text-align: center;
+  padding: 20px;
+}
+.car-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.car-gallery img {
+  width: 150px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+        .tariff-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .tariff-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .tariff-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tariff-section th, .tariff-section td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .tariff-section th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .tariff-section tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            color: #f0e68c;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 14px;
+            line-height: 1.8;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+            color: #f4a460;
+        }
+
+        .footer-column .address {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-column .social-icons img {
+            width: 24px;
+            margin-right: 10px;
+            transition: transform 0.2s;
+        }
+
+        .footer-column .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-column .map {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-column {
+        flex: 1 0 100%;
+        margin: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Selvam Cabs ph:-9344460321 / 9865452866 </div>
+        <div>
+            <a href="index.html" style="color: yellow;">Home</a>
+            <a href="tarrif.html">Tariff</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="#footer_column">Contact</a>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to Selvam Cabs</h1>
+        <h2>Your Trusted Travel Partner in Tirunelveli</h2>
+
+        <!-- Slideshow Section -->
+        <div class="slideshow">
+            <img src="manjolai.jpg" alt="manjol">
+            <img src="kulasai.jpg" alt="Kulasai Festival">
+            <img src="tiruchendur.jpg" alt="Tiruchendur Temple">
+            <img src="kanyakumari.jpeg" alt="kanyakumai">
+            <img src="kurukkudurai.jpg" alt="Kurukkuturai">
+            <img src="kutralam.jpg" alt="Kutralam">
+            <img src="dam.jpg" alt="dam">
+            <img src="tenkasi.jpg" alt="Tenkasi">
+        </div>
+    </div>
+
+    
+
+    <div class="contant" id="contacnts">
+       <p>Selvam Cabs in Tirunelveli provides safe and reliable taxi service from Tirunelveli for both local and outstation taxi service. Our drivers are highly experienced and well knowledge about the road for safety journey and saving time. We provide pick up / drop services within the city and from Airport, railway station and tourist destination in Tirunelveli.Our mission is to provide best and affordable car services for outstation and local service. We keep our starting costs low to provide excellent services.We guarantee to provide safety and affordable service to our customers.For on-road safety, we provide new, clean,and well maintained cars and hire only courteous and experienced chauffeurs who are well versed with regional routes. For online safety, the most secure industrial practices for ensuring the privacy of your information are used.Our Taxi services are available at quite affordable rates while providing the best timely services. You can book a Taxi either via phone or through their online websites. All phones made for booking are well responded in very short span of time. Irrespective of the destination and distance these services promise of timely transportations under any given condition.<p>
+ </div>
+
+<div class="containor">
+    <h2>OUR CARS</h2>
+    <hr>
+    <div class="car-gallery">
+    <img src="innova.jpg" alt="Innova" loading="lazy">
+    <img src="innovacrysta.jpg" alt="Innova Crysta" loading="lazy">
+    <img src="toyattoetios.jpg" alt="Toyota Etios" loading="lazy">
+    <img src="shiftdesire.jpg" alt="Swift Dzire" loading="lazy">
+    <img src="savera.jpg" alt="Savera" loading="lazy">
+    <img src="shiftdesire.jpg" alt="Swift Dzire" loading="lazy">
+</div>
+
+
+    <!-- Tariff Section -->
+    <div class="tariff-section" id="tariff">
+        <h2>Tariff Details</h2>
+        <table>
+            <thead>
+                <tr>
+                 <th>Vehicles</th>
+                <th>150 Kms. Per Day (12 Hrs)</th>
+                <th>Extra K.M. Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Innova 2014</td>
+                <td>4000 RS</td>
+                <td>17 RS</td>
+            </tr>
+            <tr>
+                <td>Innova Crysta</td>
+                <td>5000 RS</td>
+                <td>20 RS</td>
+            </tr>
+            <tr>
+                <td>Tempo Traveller</td>
+                <td>5900 RS</td>
+                <td>23 RS</td>
+            </tr>
+            <tr>
+                <td>Toyota Etios</td>
+                <td>2800 RS</td>
+                <td>13 RS</td>
+            </tr>
+            <tr>
+                <td>Swift Dzire</td>
+                <td>2800 RS</td>
+                <td>13 RS</td>
+            </tr>
+            <tr>
+                <td>Savera (Non-AC)</td>
+                <td>3500 RS</td>
+                <td>16 RS</td>
+            </tr>            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer" id="footer_column">
+        <div class="footer-column">
+            <h3>ABOUT US</h3>
+            <p><strong>Selvam Cabs</strong> is one of the leading cab services in Tirunelveli, providing safe, reliable, and affordable transportation for locals and tourists. We have a wide fleet of well-maintained cars, including A/C and non-A/C vehicles, to make your journey comfortable and enjoyable.</p>
+        </div>
+        <div class="footer-column">
+            <h3>NAVIGATION</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="aboutus.html">Services</a></p>
+            <p><a href="tarrif.html">Tariff</a></p>
+            <p><a href="#contact">Contact Us</a></p>
+        </div>
+        <div class="footer-column">
+ <h3>CONTACT US</h3>
+    <p class="address"><strong>Address:</strong> Near By Saranalayam, Tirunelveli-627001, Tamil Nadu, INDIA</p>
+    <p><strong>Mobile:</strong> 9344460321 / 9865452866</p>
+    <p><strong>Email:</strong> selvacab3210@gmail.com</p>
+    <div class="social-icons">
+        <a href="mailto:selvacab3210@gmail.com">
+            <img src="gmail.png" alt="Gmail Logo" title="Email Us">
+        </a>
+        <a href="tel:+919344460321, 9344460321">
+            <img src="telephone.png" alt="Phone Icon" title="Call Us">
+        </a>
+        <a href="https://wa.me/9865452866" target="_blank">
+            <img src="whatsap.jpeg" alt="WhatsApp Logo" title="Chat on WhatsApp">
+        </a>
+    </div>
+</div>
+
+ <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow img');
+    const playButton = document.createElement('button');
+    const pauseButton = document.createElement('button');
+    let slideshowInterval;
+
+    function showSlides() {
+        slides.forEach((slide, index) => {
+            slide.style.display = index === slideIndex ? 'block' : 'none';
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+    }
+
+    function startSlideshow() {
+        slideshowInterval = setInterval(showSlides, 3000);
+    }
+
+    function stopSlideshow() {
+        clearInterval(slideshowInterval);
+    }
+
+    // Initialize Slideshow
+    startSlideshow();
+    showSlides();
+
+    // Add Play/Pause Buttons
+    playButton.textContent = 'Play';
+    pauseButton.textContent = 'Pause';
+    document.querySelector('.slideshow').appendChild(playButton);
+    document.querySelector('.slideshow').appendChild(pauseButton);
+
+    playButton.addEventListener('click', startSlideshow);
+    pauseButton.addEventListener('click', stopSlideshow);
+</script>
+
+</body>
+</html>
+
