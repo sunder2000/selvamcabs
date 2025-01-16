@@ -171,11 +171,59 @@
 
         /* Footer */
         .footer {
-            background-color: #222;
-            color: #aaa;
-            text-align: center;
-            padding: 10px 0;
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
+
+        .footer-column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            color: #f0e68c;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 14px;
+            line-height: 1.8;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+            color: #f4a460;
+        }
+
+        .footer-column .address {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-column .social-icons img {
+            width: 24px;
+            margin-right: 10px;
+            transition: transform 0.2s;
+        }
+
+        .footer-column .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-column .map {
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -210,7 +258,7 @@
             <a href="index.html">Home</a>
             <a href="tarrif.html">Tarrif</a>
             <a href="#about" style="color: yellow;">About Us</a>
-            <a href="#contact">Contact</a>
+            <a href="#footer_column">Contact</a>
         </div>
     </div>
 
@@ -235,20 +283,35 @@
             <li>Live Tracking: Real-time GPS tracking for peace of mind.</li>
         </ul>
     </div>
-
-    <div class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>
-            Need a reliable cab service? Get in touch with us today! <br>
-            <strong>Phone:</strong>  9344460321 / 9865452866 <br>
-            <strong>Email:</strong> <a href="selvacab3210@gmail.com">selvacab3210@gmail.com</a> <br>
-            <strong>Location:</strong> Near By Saranalayam, Tirunelveli-627001, Tamil Nadu, INDIA
-
-        </p>
+<p style="white" align="center">Have A Nice Day :)</p>
+     <div class="footer" id="footer_column">
+        <div class="footer-column">
+            <h3>ABOUT US</h3>
+            <p><strong>Selvam Cabs</strong> is one of the leading cab services in Tirunelveli, providing safe, reliable, and affordable transportation for locals and tourists. We have a wide fleet of well-maintained cars, including A/C and non-A/C vehicles, to make your journey comfortable and enjoyable.</p>
+        </div>
+        <div class="footer-column">
+            <h3>NAVIGATION</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="aboutus.html">Services</a></p>
+            <p><a href="tarrif.html">Tariff</a></p>
+            <p><a href="#contact">Contact Us</a></p>
+        </div>
+        <div class="footer-column">
+ <h3>CONTACT US</h3>
+    <p class="address"><strong>Address:</strong> Near By Saranalayam, Tirunelveli-627001, Tamil Nadu, INDIA</p>
+    <p><strong>Mobile:</strong> 9344460321 / 9865452866</p>
+    <p><strong>Email:</strong> selvacab3210@gmail.com</p>
+    <div class="social-icons">
+        <a href="mailto:selvacab3210@gmail.com">
+            <img src="gmail.png" alt="Gmail Logo" title="Email Us">
+        </a>
+        <a href="tel:+919344460321, 9344460321">
+            <img src="telephone.png" alt="Phone Icon" title="Call Us">
+        </a>
+        <a href="https://wa.me/9865452866" target="_blank">
+            <img src="whatsap.jpeg" alt="WhatsApp Logo" title="Chat on WhatsApp">
+        </a>
     </div>
-
-    <div class="footer">
-        <p>&copy; 2025 Selvam Cabs. All rights reserved.</p>
-    </div>
+</div>
 </body>
 </html>
