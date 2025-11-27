@@ -387,6 +387,66 @@ background: linear-gradient(to right, #f953c6, #b91d73);
         </table>
     </div>
 <p style="white" align="center">Have A Nice Day :)</p>
+  <!-- BOOK THE RIDE FORM -->
+<div style="max-width:600px;margin:30px auto;padding:20px;background:white;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    <h2 style="text-align:center;color:#ff5000;">BOOK THE RIDE</h2>
+
+    <label>Full Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required
+           style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;">
+
+    <label>Phone Number:</label>
+    <input type="text" id="phone" placeholder="Enter phone number" required
+           style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;">
+
+    <label>Select Vehicle:</label>
+    <select id="vehicle" style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;">
+        <option value="Toyota Innova">Toyota Innova</option>
+        <option value="Toyota Innova Crysta">Toyota Innova Crysta</option>
+        <option value="Tempo Traveller">Tempo Traveller</option>
+        <option value="Sedan Vehicle">Sedan Vehicle</option>
+        <option value="Toyota Etios">Toyota Etios</option>
+    </select>
+
+    <label>Trip Description:</label>
+    <textarea id="description" rows="4" placeholder="Enter trip details"
+              style="width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;"></textarea>
+
+    <button onclick="sendWhatsApp()"
+            style="width:100%;padding:12px;background:#32cd32;color:white;font-size:18px;border:none;border-radius:5px;cursor:pointer;">
+        Submit & WhatsApp Us
+    </button>
+</div>
+
+<script>
+function sendWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const vehicle = document.getElementById("vehicle").value;
+    const description = document.getElementById("description").value.trim();
+
+    if (!name || !phone || !description) {
+        alert("Please fill all details before submitting.");
+        return;
+    }
+
+    const message =
+        "New Cab Booking:%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Vehicle: " + vehicle + "%0A" +
+        "Trip Details: " + description;
+
+    // WhatsApp number
+    const phoneNumber = "9344460321";
+
+    // Open WhatsApp
+    window.open("https://wa.me/" + phoneNumber + "?text=" + message, "_blank");
+
+    alert("Thank you for booking! We will contact you soon.");
+}
+</script>
+
 
     <!-- Footer Section -->
     <div class="footer" id="footer_column">
@@ -457,4 +517,5 @@ background: linear-gradient(to right, #f953c6, #b91d73);
 
 </body>
 </html>
+
 
