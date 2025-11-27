@@ -465,48 +465,67 @@ background: linear-gradient(to right, #f953c6, #b91d73);
     playButton.addEventListener('click', startSlideshow);
     pauseButton.addEventListener('click', stopSlideshow);
 </script>
-  <!-- Booking Form Popup -->
+ <!-- Booking Form Popup -->
 <div id="bookingForm" 
      style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
             background:rgba(0,0,0,0.6); backdrop-filter:blur(3px);">
 
-  <div style="background:white; max-width:400px; margin:80px auto; padding:25px; border-radius:10px;">
-    <h2 style="text-align:center; color:#ff6600;">Book Your Ride</h2>
+  <div style="background:white; max-width:400px; margin:80px auto; padding:25px; border-radius:10px;
+              box-shadow:0 4px 10px rgba(0,0,0,0.3);">
 
-    <label>Name:</label>
-    <input id="custName" type="text" style="width:100%; padding:8px; margin-bottom:10px;">
+    <h2 style="text-align:center; color:#ff6600; margin-bottom:20px;">Book Your Ride</h2>
 
-    <label>Phone Number:</label>
-    <input id="custPhone" type="text" style="width:100%; padding:8px; margin-bottom:10px;">
+    <!-- NAME -->
+    <label style="font-weight:600;">Full Name</label>
+    <input id="custName" type="text" placeholder="Enter your name"
+           style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc; 
+                  border-radius:6px; font-size:15px;">
 
-    <label>Select Vehicle:</label>
-    <select id="vehicle" style="width:100%; padding:8px; margin-bottom:10px;">
-      <option value="Toyota Innova">Toyota Innova</option>
-      <option value="Toyota Crysta">Toyota Crysta</option>
-      <option value="Tempo Traveller">Tempo Traveller</option>
-      <option value="Sedan Vehicle">Sedan Vehicle</option>
-      <option value="Toyota Etios">Toyota Etios</option>
+    <!-- PHONE -->
+    <label style="font-weight:600;">Phone Number</label>
+    <input id="custPhone" type="text" placeholder="Enter phone number"
+           style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc;
+                  border-radius:6px; font-size:15px;">
+
+    <!-- VEHICLE -->
+    <label style="font-weight:600;">Select Vehicle</label>
+    <select id="vehicle"
+            style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc;
+                   border-radius:6px; font-size:15px;">
+       <option value="" disabled selected>Select vehicle</option>
+       <option value="Toyota Innova">Toyota Innova</option>
+       <option value="Toyota Crysta">Toyota Crysta</option>
+       <option value="Tempo Traveller">Tempo Traveller</option>
+       <option value="Sedan Vehicle">Sedan Vehicle</option>
+       <option value="Toyota Etios">Toyota Etios</option>
     </select>
 
-    <label>Description:</label>
-    <textarea id="desc" rows="3" style="width:100%; padding:8px;"></textarea>
+    <!-- DESCRIPTION -->
+    <label style="font-weight:600;">Trip Description</label>
+    <textarea id="desc" rows="3" placeholder="Enter trip details..."
+              style="width:100%; padding:10px; margin:6px 0 20px 0; border:1px solid #ccc;
+                     border-radius:6px; font-size:15px;"></textarea>
 
-    <br><br>
-
+    <!-- SUBMIT -->
     <button onclick="submitBooking()" 
-      style="width:100%; padding:12px; background:green; color:white; border:none; border-radius:6px; font-size:18px;">
+      style="width:100%; padding:12px; background:green; color:white; border:none;
+             border-radius:6px; font-size:18px; cursor:pointer;">
       Submit
     </button>
 
     <br><br>
 
+    <!-- CLOSE -->
     <button onclick="closeBookingForm()" 
-      style="width:100%; padding:10px; background:#ff0000; color:white; border:none; border-radius:6px;">
+      style="width:100%; padding:10px; background:#ff0000; color:white; border:none;
+             border-radius:6px; cursor:pointer;">
       Close
     </button>
+
   </div>
 
 </div>
+
       <script>
 function openBookingForm() {
     document.getElementById("bookingForm").style.display = "block";
@@ -547,6 +566,7 @@ function submitBooking() {
 
 </body>
 </html>
+
 
 
 
