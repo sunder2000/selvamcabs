@@ -280,6 +280,35 @@ background: linear-gradient(to right, #f953c6, #b91d73);
         margin: 5px;
     }
 }
+      .book-btn {
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7b00, #ff3d00);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 94, 0, 0.6);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    animation: floatBtn 3s ease-in-out infinite;
+}
+
+/* Hover Effect */
+.book-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.8);
+    background: linear-gradient(135deg, #ff9900, #ff4500);
+}
+
+/* Floating animation */
+@keyframes floatBtn {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
 
     </style>
 </head>
@@ -293,12 +322,12 @@ background: linear-gradient(to right, #f953c6, #b91d73);
             <a href="tarrif.html">Tariff</a>
             <a href="aboutus.html">About Us</a>
             <a href="#footer_column">Contact</a>
-          <center>
-  <button onclick="openBookingForm()" 
-    style="padding:12px 25px; font-size:18px; background:#ff6600; color:white; border:none; border-radius:8px; cursor:pointer;">
-    🚕 Book a Ride
-  </button>
+   <center>
+    <button class="book-btn" onclick="openBookingForm()">
+        🚕 BOOK NOW
+    </button>
 </center>
+
 
         </div>
     </div>
@@ -566,6 +595,7 @@ function submitBooking() {
 
 </body>
 </html>
+
 
 
 
