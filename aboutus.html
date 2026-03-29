@@ -18,7 +18,7 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(135deg, #f0e68c, #87ceeb);
+         background: linear-gradient(270deg, #ff9a9e, #fecfef);
             color: #333;
             line-height: 1.6;
         }
@@ -29,7 +29,7 @@
             justify-content: space-between;
             align-items: center;
             background-color: #333;
-            padding: 10px 20px;
+            padding: 12px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -55,6 +55,23 @@
             font-weight: bold;
             color: #f0e68c;
         }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.logo-container span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0e68c;
+}
 
         /* Hero Section */
         .hero {
@@ -111,6 +128,17 @@
             background-color: #ffc107;
             transform: scale(1.1);
         }
+.call-btn { position: fixed; right: 20px; bottom: 20px; z-index: 1000; } /* Image Style */ .call-btn img { width: 65px; height: 65px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: 0.3s; cursor: pointer; } /* Hover Effect */ .call-btn img:hover { transform: scale(1.1); }
+
+.call-btn img {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); }
+    100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); }
+}
 
         /* Content Section */
         .content {
@@ -258,16 +286,51 @@
     }
 }
 
+      .book-btn {
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7b00, #ff3d00);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 94, 0, 0.6);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    animation: floatBtn 3s ease-in-out infinite;
+}
+
+/* Hover Effect */
+.book-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 94, 0, 0.8);
+    background: linear-gradient(135deg, #ff9900, #ff4500);
+}
+
+/* Floating animation */
+@keyframes floatBtn {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
     </style>
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">Selvam Cabs</div>
+       <div class="logo-container">
+    <img src="logo.jpeg" alt="Selvam Cabs Logo">
+    <span>Selvam Cabs</span>
+</div>
         <div>
             <a href="index.html">Home</a>
-            <a href="tarrif.html">Tarrif</a>
+            <a href="tourisum.html">Tourisum</a>
             <a href="#about" style="color: yellow;">About Us</a>
-            <a href="#footer_column">Contact</a>
+              <button class="book-btn" onclick="openBookingForm()">
+            🚕 BOOK NOW
+    </button>
+  
         </div>
     </div>
 
@@ -275,10 +338,12 @@
         <div class="hero-text">
             <h1>About Us</h1>
             <p>Your Trusted Travel Partner in Tirunelveli :)</p>
-            <button>Explore More</button>
+            <a href="temples.html">
+    <button>Explore More</button>
+</a>
         </div>
     </div>
-
+<a href="tel:+919344460321" class="call-btn"> <img src="phone.png" alt="Call"> </a>
     <div class="content" id="about">
         <h2>Who We Are?</h2>
         <img src="driver_pic.png" alt="Selvam Cabs Driver">
@@ -302,7 +367,7 @@
             <h3>NAVIGATION</h3>
             <p><a href="index.html">Home</a></p>
             <p><a href="aboutus.html">Services</a></p>
-            <p><a href="tarrif.html">Tariff</a></p>
+            <p><a href="tourisum.html">Tourisum</a></p>
             <p><a href="#contact">Contact Us</a></p>
         </div>
         <div class="footer-column">
@@ -322,5 +387,103 @@
         </a>
     </div>
 </div>
+<!-- Booking Form Popup -->
+<div id="bookingForm" 
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+            background:rgba(0,0,0,0.6); backdrop-filter:blur(3px);">
+
+  <div style="background:white; max-width:400px; margin:80px auto; padding:25px; border-radius:10px;
+              box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+
+    <h2 style="text-align:center; color:#ff6600; margin-bottom:20px;">Book Your Ride</h2>
+
+    <!-- NAME -->
+    <label style="font-weight:600;">Full Name</label>
+    <input id="custName" type="text" placeholder="Enter your name"
+           style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc; 
+                  border-radius:6px; font-size:15px;">
+
+    <!-- PHONE -->
+    <label style="font-weight:600;">Phone Number</label>
+    <input id="custPhone" type="text" placeholder="Enter phone number"
+           style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc;
+                  border-radius:6px; font-size:15px;">
+
+    <!-- VEHICLE -->
+    <label style="font-weight:600;">Select Vehicle</label>
+    <select id="vehicle"
+            style="width:100%; padding:10px; margin:6px 0 15px 0; border:1px solid #ccc;
+                   border-radius:6px; font-size:15px;">
+       <option value="" disabled selected>Select vehicle</option>
+       <option value="Toyota Innova">Toyota Innova</option>
+       <option value="Toyota Crysta">Toyota Crysta</option>
+       <option value="Tempo Traveller">Tempo Traveller</option>
+       <option value="Sedan Vehicle">Sedan Vehicle</option>
+       <option value="Toyota Etios">Toyota Etios</option>
+    </select>
+
+    <!-- DESCRIPTION -->
+    <label style="font-weight:600;">Trip Description</label>
+    <textarea id="desc" rows="3" placeholder="Enter trip details..."
+              style="width:100%; padding:10px; margin:6px 0 20px 0; border:1px solid #ccc;
+                     border-radius:6px; font-size:15px;"></textarea>
+
+    <!-- SUBMIT -->
+    <button onclick="submitBooking()" 
+      style="width:100%; padding:12px; background:green; color:white; border:none;
+             border-radius:6px; font-size:18px; cursor:pointer;">
+      Submit
+    </button>
+
+    <br><br>
+
+    <!-- CLOSE -->
+    <button onclick="closeBookingForm()" 
+      style="width:100%; padding:10px; background:#ff0000; color:white; border:none;
+             border-radius:6px; cursor:pointer;">
+      Close
+    </button>
+
+  </div>
+
+</div>
+
+      <script>
+function openBookingForm() {
+    document.getElementById("bookingForm").style.display = "block";
+}
+
+function closeBookingForm() {
+    document.getElementById("bookingForm").style.display = "none";
+}
+
+function submitBooking() {
+    let name = document.getElementById("custName").value;
+    let phone = document.getElementById("custPhone").value;
+    let vehicle = document.getElementById("vehicle").value;
+    let desc = document.getElementById("desc").value;
+
+    if(name == "" || phone == "") {
+        alert("Please enter name and phone number");
+        return;
+    }
+
+    let message =
+        "New Cab Booking:%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Vehicle: " + vehicle + "%0A" +
+        "Description: " + desc;
+
+    let whatsappURL = "https://wa.me/9344460321?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+
+    document.getElementById("bookingForm").style.display = "none";
+
+    alert("Thank you for booking! We will contact you soon.");
+}
+</script>
+
 </body>
 </html>
