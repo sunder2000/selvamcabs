@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW3EFT537R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -56,33 +57,33 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0e68c, #87ceeb);
+            font-family: poppins, sans-serif;
+            background: linear-gradient(270deg, #f0e68c, #87ceeb);
             color: #333;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 8px 16px;
             font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .navbar a:hover {
             background-color: #575757;
             border-radius: 5px;
+            transform: scale(1.1);
         }
 
         .navbar .logo {
@@ -90,6 +91,25 @@
             font-weight: bold;
             color: #f0e68c;
         }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: auto;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.logo-container span {
+    color: #f0e68c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .double-color-text {
       font-family: 'Arial', sans-serif;
       font-size: 60px;
@@ -168,41 +188,6 @@ background: linear-gradient(to right, #f953c6, #b91d73);
   border-radius: 5px;
 }
 
-        .tariff-section {
-            background-color: #f8f8f8;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .tariff-section h2 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .tariff-section table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        .tariff-section th, .tariff-section td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        .tariff-section th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .tariff-section tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
         .footer {
             background-color: #1a1a2e;
             color: #fff;
@@ -249,14 +234,54 @@ background: linear-gradient(to right, #f953c6, #b91d73);
         .footer-column .social-icons img:hover {
             transform: scale(1.2);
         }
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .footer-column .map {
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a.active {
+    color: yellow;
+}
+
+.call-btn { position: fixed; right: 20px; bottom: 20px; z-index: 1000; } /* Image Style */ .call-btn img { width: 65px; height: 65px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: 0.3s; cursor: pointer; } /* Hover Effect */ .call-btn img:hover { transform: scale(1.1); }
+
+.call-btn img {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); }
+    100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); }
+}
+
+/* BUTTON */
+.book-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #ff7b00, #ff3d00);
+    color: white;
+    cursor: pointer;
+}
+
+
+     .footer-column .map {
             margin-top: 10px;
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   }     
 @media (max-width: 768px) {
+
+
     .navbar {
         flex-direction: column;
         text-align: center;
@@ -266,6 +291,7 @@ background: linear-gradient(to right, #f953c6, #b91d73);
         padding: 5px;
         font-size: 14px;
     }
+
 
     .main-content h1 {
         font-size: 2rem;
@@ -314,23 +340,21 @@ background: linear-gradient(to right, #f953c6, #b91d73);
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo">Selvam Cabs ph:-9344460321 / 9865452866 </div>
-        <div>
-            <a href="index.html" style="color: yellow;">Home</a>
-            <a href="tarrif.html">Tariff</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="#footer_column">Contact</a>
-   <center>
-    <button class="book-btn" onclick="openBookingForm()">
-        🚕 BOOK NOW
-    </button>
-</center>
+<div class="navbar">
 
-
-        </div>
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="logo.jpeg" alt="Selvam Cabs Logo">
+        <span>Selvam Cabs</span>
     </div>
+
+    <div>
+        <a href="index.html" style="color: yellow;">Home</a>
+        <a href="tourisum.html">Tourisum</a>
+        <a href="aboutus.html">About Us</a>
+        <button class="book-btn" onclick="openBookingForm()">🚕 BOOK NOW</button>
+    </div>
+</div>
     <!-- Main Content -->
 <div class="double-color-text"><center>Selvam Cabs<center></div>
     <div class="main-content">
@@ -349,7 +373,7 @@ background: linear-gradient(to right, #f953c6, #b91d73);
             <img src="tenkasi.jpg" alt="Tenkasi">
         </div>
     </div>
-
+<a href="tel:+919344460321" class="call-btn"> <img src="phone.png" alt="Call"> </a>
     
 
  
@@ -388,41 +412,7 @@ background: linear-gradient(to right, #f953c6, #b91d73);
 </div>
 
 
-    <!-- Tariff Section -->
-    <div class="tariff-section" id="tariff">
-        <h2>Tariff Details</h2>
-        <table>
-            <thead>
-                <tr>
-                 <th>Vehicles</th>
-                <th>150 Kms. Per Day (12 Hrs)</th>
-                <th>Extra K.M. Charge</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Toyatto Innova</td>
-                <td>4700 RS</td>
-                <td>18 RS</td>
-            </tr>
-            <tr>
-                <td>Innova Crysta</td>
-                <td>6000 RS</td>
-                <td>20 RS</td>
-            </tr>
-            <tr>
-                <td>Tempo Traveller</td>
-                <td>6300 RS</td>
-                <td>24 RS</td>
-            </tr>
-            <tr>
-                <td>Sedan vehicle</td>
-                <td>3200 RS</td>
-                <td>14 RS</td>
-            </tr>
-                        </tbody>
-        </table>
-    </div>
+    
 <p style="white" align="center">Have A Nice Day :)</p>
   <!-- BOOK THE RIDE FORM -->
 
@@ -438,7 +428,7 @@ background: linear-gradient(to right, #f953c6, #b91d73);
             <h3>NAVIGATION</h3>
             <p><a href="index.html">Home</a></p>
             <p><a href="aboutus.html">Services</a></p>
-            <p><a href="tarrif.html">Tariff</a></p>
+            <p><<a href="tourisum.html">Tourisum</a></p>
             <p><a href="#contact">Contact Us</a></p>
         </div>
         <div class="footer-column">
@@ -475,7 +465,7 @@ background: linear-gradient(to right, #f953c6, #b91d73);
 
     function startSlideshow() {
         slideshowInterval = setInterval(showSlides, 3000);
-    }
+        }
 
     function stopSlideshow() {
         clearInterval(slideshowInterval);
